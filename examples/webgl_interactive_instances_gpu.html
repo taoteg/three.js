@@ -547,7 +547,6 @@
 				fragmentShader: frag,
 				uniforms: {
 					color: {
-						type: "c",
 						value: new THREE.Color(),
 					}
 				}
@@ -558,7 +557,6 @@
 				fragmentShader: "#define PICKING\n" + frag,
 				uniforms: {
 					pickingColor: {
-						type: "c",
 						value: new THREE.Color(),
 					}
 				}
@@ -604,7 +602,7 @@
 			var vert = document.getElementById( 'vertMaterial' ).textContent;
 			var frag = document.getElementById( 'fragMaterial' ).textContent;
 
-			function updateColor( object, camera ) {
+			function updateColor( object, material, camera ) {
 
 				this.value.setHex( object.userData.color );
 
